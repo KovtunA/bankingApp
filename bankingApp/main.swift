@@ -1,7 +1,7 @@
 import Foundation
 
-var path = "/Users/anastasia/Desktop/project/bankingApp.csv"
-
+//var path = "/Users/anastasia/Desktop/project/bankingApp.csv"
+//
 //guard let accoutsInfo = try? String(contentsOfFile: path ) else {
 //    print("Unable to find the document")
 //    abort()
@@ -44,41 +44,15 @@ print("Now you have \(moneyAmount + changes)")
 let newLine = "\(usersName), \(moneyAmount), \(changes), \(moneyAmount + changes)"
 print(newLine)
 
-func appendLine() {
-    guard let accoutsInfo = try? String(contentsOfFile: path ) else {
-    print("Unable to find the document")
-    abort()
-    }
-        do {
-            try newLine.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
-        } catch {
-            print("Failed to create file")
-            print("\(error)")
-        }
-    }
-
-appendLine()
 
 
-//func appendNewline(to url: URL) {
-//    if let fileHandle = try? FileHandle(forWritingTo: url) {
-//        defer {
-//            fileHandle.closeFile()
-//        }
-//        fileHandle.seekToEndOfFile()
-//        fileHandle.write(self)
-//    } else {
-//        try write(to: url)
-//    }
-//}
-
-//}
+let documentsDir = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+let fileURL = documentsDir.appendingPathComponent("Tasks").appendingPathExtension("csv")
 
 
-//
-//do {
-//    try newLine.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
-//} catch {
-//    print("Failed to create file")
-//    print("\(error)")
-//}
+var contents = try String(contentsOf: fileURL)
+contents.append("\n")
+contents.append(newLine)
+try contents.write(to: fileURL, atomically: true, encoding: .utf8)
+
+print(contents)
