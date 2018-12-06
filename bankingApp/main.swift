@@ -1,13 +1,6 @@
 import Foundation
 
-//var path = "/Users/anastasia/Desktop/project/bankingApp.csv"
-//
-//guard let accoutsInfo = try? String(contentsOfFile: path ) else {
-//    print("Unable to find the document")
-//    abort()
-//}
-//
-//print(accoutsInfo)
+logIn()
 
 print("Please, write down your name")
 let usersNameOpt = readLine()
