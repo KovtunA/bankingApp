@@ -15,7 +15,7 @@ func logIn() {
         print("Choose the operation: \n 1 - add money \n 2 - withdrow money")
         let operationOpt = readLine()
         guard let operationStr = operationOpt, let operation = Int(operationStr) else {
-            print("Something went wrong with the optioanl moneyAmount")
+            print("Something went wrong with the optioanl operation")
             abort()
         }
             switch operation {
@@ -23,6 +23,6 @@ func logIn() {
             case 2: withdrowMoney()
             default: break
         }
-        
+    
     }
 }
