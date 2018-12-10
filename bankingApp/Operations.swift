@@ -1,20 +1,11 @@
-//
-//  Different.swift
-//  bankingApp
-//
-//  Created by Anastasia on 12/6/18.
-//  Copyright © 2018 Anastasia. All rights reserved.
-//
-
 import Foundation
 
-
-    
 func addMoney(currentAmount: Double) -> Double{
     print("Write the amount you would like to add to your account")
     guard let changesStr = readLine(), let changes = Double(changesStr)  else {
         print("Something went wrong with the optioanl Changes")
         abort()}
+    
     let currentAmount = currentAmount + changes
     return currentAmount
 }

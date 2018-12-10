@@ -1,4 +1,3 @@
-
 import Foundation
 
 func logIn() {
@@ -11,6 +10,7 @@ func logIn() {
     var currentUser = Account.init(name: usersName, amount: 0)
     
     print("Hi, \(currentUser.name) Now you have \(currentUser.amount)")
+    
     func chooseOperation() {
         print("Choose the operation: \n 1 - add money \n 2 - withdrow money")
         let operationOpt = readLine()
@@ -19,11 +19,10 @@ func logIn() {
             abort()
         }
         
-            switch operation {
-            case 1: addMoney(currentAmount: currentUser.amount)
-            case 2: withdrowMoney(currentAmount: currentUser.amount)
-            default: break
+        switch operation {
+        case 1: addMoney(currentAmount: currentUser.amount)
+        case 2: withdrowMoney(currentAmount: currentUser.amount)
+        default: break
         }
-    
     }
 }
