@@ -9,12 +9,12 @@ guard let moneyAmountStr = moneyAmountOpt, let moneyAmount = Int(moneyAmountStr)
     abort()
 }
 
-print("Please, write down sum you want to replenish (to withdraw use - )")
-//let changesOpt = readLine()
-guard let changesStr = readLine(), let changes = Int(changesStr)  else {
-    print("Something went wrong with the optioanl Changes")
-    abort()
-}
+//print("Please, write down sum you want to replenish (to withdraw use - )")
+////let changesOpt = readLine()
+//guard let changesStr = readLine(), let changes = Int(changesStr)  else {
+//    print("Something went wrong with the optioanl Changes")
+//    abort()
+//}
 
 
 var newMoneyamount = moneyAmount + changes
