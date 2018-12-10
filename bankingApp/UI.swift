@@ -1,13 +1,13 @@
 import Foundation
 
-func logIn() {
+func logIn1() {
     print("Please, write down your name")
     let usersNameOpt = readLine()
     guard let usersName = usersNameOpt  else {
         print("Something went wrong with the optioanl Name")
         abort()
     }
-    var currentUser = Account.init(name: usersName, amount: 0)
+var currentUser = Account.init(name: usersName, amount: 0)
     
     print("Hi, \(currentUser.name) Now you have \(currentUser.amount)")
     

@@ -1,5 +1,19 @@
 import Foundation
 
+func logIn() {
+    print("Please, write down your name")
+    let usersNameOpt = readLine()
+    guard let usersName = usersNameOpt  else {
+        print("Something went wrong with the optioanl Name")
+        abort()
+    }
+    
+    if contentsOfFile.contains(usersName)
+    var currentUser = Account.init(name: usersName, amount: 0)
+    
+    print("Hi, \(currentUser.name) Now you have \(currentUser.amount)")
+}
+
 func addMoney(currentAmount: Double) -> Double{
     print("Write the amount you would like to add to your account")
     guard let changesStr = readLine(), let changes = Double(changesStr)  else {

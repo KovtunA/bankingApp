@@ -1,5 +1,5 @@
 import Foundation
 
-logIn()
+logIn1()
 chooseOperation()
 workingWithStorage()
