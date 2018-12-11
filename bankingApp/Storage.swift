@@ -5,15 +5,29 @@ let fileURL = documentsDir.appendingPathComponent("Tasks").appendingPathExtensio
 var contentsOfFile = try! String(contentsOf: fileURL)
 
 func addNewAcc() {
-//contentsOfFile.append("\n")
-//contentsOfFile.append()
-try! contentsOfFile.write(to: fileURL, atomically: true, encoding: .utf8)
+    //contentsOfFile.append("\n")
+    //contentsOfFile.append()
+    try! contentsOfFile.write(to: fileURL, atomically: true, encoding: .utf8)
 }
 
-var newArray: [Account] = []
-let randomNames = contentsOfFile.split(separator: "\n")
+func accsessToUsers(contentsOfFile: String) {
+    var newArray: [Account] = []
+    let infoFromfileMaped: [String] = contentsOfFile.map { str in String(str) }
+    
+    var lineComponents: [[String]] = []
+    
+    for str in infoFromfileMaped {
+        lineComponents.append(str.components(separatedBy: ","))
+        }
+}
+//let name = String ()
+//let amount = Double
+//let changes = Double
+//let newResult = Double
+//guard let infoFromfile=infoFromfile else {print("Smth wrong wit infoFromFile")}
 
-//let line = randomNames.map { aLine:() in}
+
+//let line = randomNames.сmap { aLine:() in}
 //    let surnameLastnameAge = aLine.replacingOccurrences(of: "\"", with: "").split(separator:",")
 //    guard surnameLastnameAge.count == 3, let age = Int(surnameLastnameAge[2]) else { print("Smth went wrong")
 //        return}
@@ -24,6 +38,8 @@ let randomNames = contentsOfFile.split(separator: "\n")
 //    newArray.append(people)
 //
 //}
+//
+//
 //for aLine in randomNames {
 //    let surnameLastnameAge = aLine.replacingOccurrences(of: "\"", with: "").split(separator:",")
 //    guard surnameLastnameAge.count == 3, let age = Int(surnameLastnameAge[2]) else { continue }
