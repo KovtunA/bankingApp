@@ -1,7 +1,5 @@
 import Foundation
 
-var currentUser = Account.init(name: getName(), account: 0, changes: 0, amount: 0)
-
 let documentsDir = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 let fileURL = documentsDir.appendingPathComponent("Tasks").appendingPathExtension("csv")
 var contentsOfFile = try! String(contentsOf: fileURL)
@@ -23,7 +21,7 @@ func accsessToUsers() {
         guard let amount = Double (aLine[1]),
             let changes = Double (aLine[2]),
             let newResult = Double (aLine[3]) else { print("Smth wrong with optional"); continue }
-        let account = Account(name: name, account: amount, changes: changes, amount: newResult)
+        let account = Account(name: name, amount: amount)
         accountsArrey.append(account)
     }
 }
