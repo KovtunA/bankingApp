@@ -11,62 +11,18 @@ func addNewAcc() {
 }
 
 func accsessToUsers(contentsOfFile: String) {
-    var newArray: [Account] = []
-    let infoFromfileMaped: [String] = contentsOfFile.map { str in String(str) }
-    
-    var lineComponents: [[String]] = []
+    var accountsArrey: [Account] = []
+    let infoFromfile = contentsOfFile.split(separator: "\n")
+    let infoFromfileMaped: [String] = infoFromfile.map { str in String(str) }
     
     for str in infoFromfileMaped {
-        lineComponents.append(str.components(separatedBy: ","))
-        }
-}
-//let name = String ()
-//let amount = Double
-//let changes = Double
-//let newResult = Double
-//guard let infoFromfile=infoFromfile else {print("Smth wrong wit infoFromFile")}
-
-
-var accountsArrey: [Account] = []
-let infoFromfile = contentsOfFile.split(separator: "\n")
-let infoFromfileMaped: [String] = infoFromfile.map { str in String(str) }
-
-//var arrayOfArrays: [[String]] = []
-
-for str in infoFromfileMaped {
-    let aLine = str.components(separatedBy: ",")
-    let name = String (aLine[0])
-    guard let amount = Double (aLine[1]),
-        let changes = Double (aLine[2]),
-        let newResult = Double (aLine[3]) else { print("Smth wrong with optional"); continue }
-    let account = Account(name: name, account: amount, changes: changes, amount: newResult)
-    accountsArrey.append(contentsOf: account)
+        let aLine = str.components(separatedBy: ",")
+        let name = String (aLine[0])
+        guard let amount = Double (aLine[1]),
+            let changes = Double (aLine[2]),
+            let newResult = Double (aLine[3]) else { print("Smth wrong with optional"); continue }
+        let account = Account(name: name, account: amount, changes: changes, amount: newResult)
+        accountsArrey.append(account)
+    }
 }
 
-print(accountsArrey)
-
-
-
-//let line = randomNames.сmap { aLine:() in}
-//    let surnameLastnameAge = aLine.replacingOccurrences(of: "\"", with: "").split(separator:",")
-//    guard surnameLastnameAge.count == 3, let age = Int(surnameLastnameAge[2]) else { print("Smth went wrong")
-//        return}
-//
-//    let lastName = String(surnameLastnameAge[1])
-//    let firstName = String(surnameLastnameAge[0])
-//    let people = Person(firstName: firstName, lastName: lastName, age: age)
-//    newArray.append(people)
-//
-//}
-//
-//
-//for aLine in randomNames {
-//    let surnameLastnameAge = aLine.replacingOccurrences(of: "\"", with: "").split(separator:",")
-//    guard surnameLastnameAge.count == 3, let age = Int(surnameLastnameAge[2]) else { continue }
-//
-//    let lastName = String(surnameLastnameAge[1])
-//    let firstName = String(surnameLastnameAge[0])
-//    let people = Person(firstName: firstName, lastName: lastName, age: age)
-//    newArray.append(people)
-//}
-//print(newArray.count)

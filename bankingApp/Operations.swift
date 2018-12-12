@@ -8,8 +8,9 @@ func logIn() {
         abort()
     }
     
-//    if contentsOfFile.contains(usersName) - если есть имя работаем с текущим амаунтом если нет добавляем нового юзера (уточняя надо ли) и присваеваем ему по 0 в акк
-    var currentUser = Account.init(name: usersName, amount: 0)
+    //    if contentsOfFile.contains(usersName) - если есть имя работаем с текущим амаунтом если нет добавляем нового юзера (уточняя надо ли) и присваеваем ему по 0 в акк
+    var currentUser = Account.init(name: usersName, account: <#Double#>, changes: <#Double#>, amount: 0)
+    
     
     print("Hi, \(currentUser.name) Now you have \(currentUser.amount)")
 }

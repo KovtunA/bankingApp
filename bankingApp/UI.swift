@@ -7,7 +7,7 @@ func logIn1() {
         print("Something went wrong with the optioanl Name")
         abort()
     }
-var currentUser = Account.init(name: usersName, amount: 0)
+    var currentUser = Account.init(name: usersName, account: 0, changes: 0, amount: 0) // стягивать 
     
     print("Hi, \(currentUser.name) Now you have \(currentUser.amount)")
     
