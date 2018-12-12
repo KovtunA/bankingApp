@@ -1,19 +1,5 @@
 import Foundation
 
-func logIn() {
-    print("Please, write down your name")
-    let usersNameOpt = readLine()
-    guard let usersName = usersNameOpt  else {
-        print("Something went wrong with the optioanl Name")
-        abort()
-    }
-    
-    //    if contentsOfFile.contains(usersName) - если есть имя работаем с текущим амаунтом если нет добавляем нового юзера (уточняя надо ли) и присваеваем ему по 0 в акк
-    var currentUser = Account.init(name: usersName, account: <#Double#>, changes: <#Double#>, amount: 0)
-    
-    
-    print("Hi, \(currentUser.name) Now you have \(currentUser.amount)")
-}
 
 func addMoney(currentAmount: Double) -> Double{
     print("Write the amount you would like to add to your account")

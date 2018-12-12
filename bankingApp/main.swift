@@ -1,5 +1,3 @@
-import Foundation
-
-logIn1()
-chooseOperation()
-//workingWithStorage()
+getName()
+//logIn1()
+//chooseOperation()

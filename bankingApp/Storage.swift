@@ -1,5 +1,7 @@
 import Foundation
 
+var currentUser = Account.init(name: getName(), account: 0, changes: 0, amount: 0)
+
 let documentsDir = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 let fileURL = documentsDir.appendingPathComponent("Tasks").appendingPathExtension("csv")
 var contentsOfFile = try! String(contentsOf: fileURL)
@@ -10,11 +12,11 @@ func addNewAcc() {
     try! contentsOfFile.write(to: fileURL, atomically: true, encoding: .utf8)
 }
 
-func accsessToUsers(contentsOfFile: String) {
-    var accountsArrey: [Account] = []
-    let infoFromfile = contentsOfFile.split(separator: "\n")
-    let infoFromfileMaped: [String] = infoFromfile.map { str in String(str) }
-    
+
+var accountsArrey: [Account] = []
+let infoFromfile = contentsOfFile.split(separator: "\n")
+let infoFromfileMaped: [String] = infoFromfile.map { str in String(str) }
+func accsessToUsers() {
     for str in infoFromfileMaped {
         let aLine = str.components(separatedBy: ",")
         let name = String (aLine[0])
@@ -25,4 +27,5 @@ func accsessToUsers(contentsOfFile: String) {
         accountsArrey.append(account)
     }
 }
+
 
