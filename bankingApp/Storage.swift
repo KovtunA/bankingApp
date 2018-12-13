@@ -18,9 +18,7 @@ func accsessToUsers() {
     for str in infoFromfileMaped {
         let aLine = str.components(separatedBy: ",")
         let name = String (aLine[0])
-        guard let amount = Double (aLine[1]),
-            let changes = Double (aLine[2]),
-            let newResult = Double (aLine[3]) else { print("Smth wrong with optional"); continue }
+        guard let amount = Double (aLine[1]) else { print("Smth wrong with optional"); continue }
         let account = Account(name: name, amount: amount)
         accountsArrey.append(account)
     }

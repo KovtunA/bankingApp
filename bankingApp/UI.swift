@@ -19,9 +19,9 @@ func chooseOperation() {
         abort()
     }
     
-    switch operation {
-    case 1: addMoney(currentAmount: currentUser.amount)
-    case 2: withdrowMoney(currentAmount: currentUser.amount)
-    default: break
-    }
+//    switch operation {
+//    case 1: addMoney(currentAmount: currentUser.amount)
+//    case 2: withdrowMoney(currentAmount: currentUser.amount)
+//    default: break
+//    }
 }
