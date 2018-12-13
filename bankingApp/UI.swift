@@ -11,6 +11,14 @@ func getName() -> String {
     return usersName
 }
 
+//var userName = getName()
+//
+//func getAcc(name: String) -> Account {
+//    let smth = accountsArrey.first(where: {$0.name == userName})
+//    guard let acc = smth else {return Account(name: name, amount: 0) }
+//    return acc
+//}
+
 func chooseOperation() {
     print("Choose the operation: \n 1 - add money \n 2 - withdrow money")
     let operationOpt = readLine()
