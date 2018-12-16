@@ -11,15 +11,13 @@ func getName() -> String {
     return usersName
 }
 
-//var userName = getName()
-//
-//func getAcc(name: String) -> Account {
-//    let smth = accountsArrey.first(where: {$0.name == userName})
-//    guard let acc = smth else {return Account(name: name, amount: 0) }
-//    return acc
-//}
+func getAcc(name: String) -> Account {
+    let smth = accountsArrey.first(where: {$0.name == userName})
+    guard let acc = smth else {return Account(name: name, amount: 0) }
+    return acc
+}
 
-func chooseOperation() {
+func chooseOperation() -> Double {
     print("Choose the operation: \n 1 - add money \n 2 - withdrow money")
     let operationOpt = readLine()
     guard let operationStr = operationOpt, let operation = Int(operationStr) else {
@@ -27,9 +25,10 @@ func chooseOperation() {
         abort()
     }
     
-//    switch operation {
-//    case 1: addMoney(currentAmount: currentUser.amount)
-//    case 2: withdrowMoney(currentAmount: currentUser.amount)
-//    default: break
-//    }
+    switch operation {
+    case 1: currentUser.amount = addMoney(currentAmount: currentUser.amount)
+    case 2: currentUser.amount = withdrowMoney(currentAmount: currentUser.amount)
+    default: break
+    }
+    return currentUser.amount
 }

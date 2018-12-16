@@ -4,9 +4,10 @@ let documentsDir = try! FileManager.default.url(for: .documentDirectory, in: .us
 let fileURL = documentsDir.appendingPathComponent("Tasks").appendingPathExtension("csv")
 var contentsOfFile = try! String(contentsOf: fileURL)
 
-func addNewAcc() {
-    //contentsOfFile.append("\n")
-    //contentsOfFile.append()
+func addNewAcc(currentUser: Account) {
+let newStirng = String(currentUser)
+    contentsOfFile.append("\n")
+   // contentsOfFile.append(currentUser)
     try! contentsOfFile.write(to: fileURL, atomically: true, encoding: .utf8)
 }
 
