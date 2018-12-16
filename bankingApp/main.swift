@@ -9,5 +9,5 @@ print(currentUser)
 currentUser.amount = chooseOperation()
 
 print(currentUser)
-addNewAcc()
+addNewAcc(currentUser: currentUser)
 print(accountsArrey)
