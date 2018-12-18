@@ -4,13 +4,19 @@ let documentsDir = try! FileManager.default.url(for: .documentDirectory, in: .us
 let fileURL = documentsDir.appendingPathComponent("Tasks").appendingPathExtension("csv")
 var contentsOfFile = try! String(contentsOf: fileURL)
 
-func addNewAcc(currentUser: Account) {
-    let newStirng = String("\(currentUser.name),\(currentUser.amount)")
-    contentsOfFile.append("\n")
-    contentsOfFile.append(newStirng)
-    try! contentsOfFile.write(to: fileURL, atomically: true, encoding: .utf8)
+ var newInfo: String = ""
+func updateInfo() {
+    let acc = accountsArrey.filter {$0.name != currentUser.name}
+    for elm in acc {
+        let elmString = String("\n\(elm.name),\(elm.amount)")
+        newInfo.append(elmString)
+        try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
+    }
+    let newStirng = String("\n\(currentUser.name),\(currentUser.amount)")
+  newInfo.append(newStirng)
+    try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
+    
 }
-
 
 var accountsArrey: [Account] = []
 let infoFromfile = contentsOfFile.split(separator: "\n")
@@ -24,5 +30,6 @@ func accsessToUsers() {
         accountsArrey.append(account)
     }
 }
+
 
 
