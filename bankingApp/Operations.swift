@@ -12,12 +12,18 @@ func addMoney(currentAmount: Double) -> Double {
     return currentAmountN
 }
 
-func withdrowMoney(currentAmount: Double) -> Double {
+func withdrawMoney(currentAmount: Double) -> Double {
     print("Write the amount you would like to withdraw from your account")
     guard let changesStr = readLine(), let changes = Double(changesStr)  else {
         print("Something went wrong with the optioanl Changes")
         abort()}
+    if currentAmount >= changes{
     let currentAmountN = currentAmount - changes
     print("\(currentUser.name), now you have \(currentAmountN)")
-    return currentAmountN
+        return currentAmountN
+    } else if currentAmount < changes {
+        print("you can't withdraw money")
+        return currentAmount
+    }
+    return currentAmount
 }
