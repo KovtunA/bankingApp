@@ -5,9 +5,9 @@ let fileURL = documentsDir.appendingPathComponent("Tasks").appendingPathExtensio
 var contentsOfFile = try! String(contentsOf: fileURL)
 
 func addNewAcc(currentUser: Account) {
-let newStirng = String("\(currentUser.name),\(currentUser.amount)")
+    let newStirng = String("\(currentUser.name),\(currentUser.amount)")
     contentsOfFile.append("\n")
-   contentsOfFile.append(newStirng)
+    contentsOfFile.append(newStirng)
     try! contentsOfFile.write(to: fileURL, atomically: true, encoding: .utf8)
 }
 

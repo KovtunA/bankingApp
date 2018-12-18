@@ -1,7 +1,7 @@
 import Foundation
 
 
-func addMoney(currentAmount: Double) -> Double{
+func addMoney(currentAmount: Double) -> Double {
     print("Write the amount you would like to add to your account")
     guard let changesStr = readLine(), let changes = Double(changesStr)  else {
         print("Something went wrong with the optioanl Changes")
@@ -12,7 +12,7 @@ func addMoney(currentAmount: Double) -> Double{
     return currentAmountN
 }
 
-func withdrowMoney(currentAmount: Double) -> Double{
+func withdrowMoney(currentAmount: Double) -> Double {
     print("Write the amount you would like to withdraw from your account")
     guard let changesStr = readLine(), let changes = Double(changesStr)  else {
         print("Something went wrong with the optioanl Changes")

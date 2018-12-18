@@ -66,10 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				5D00B71C21AEAD1100BA9055 /* main.swift */,
-				5D86594821B960B0002265FE /* Accaunt.swift */,
 				5D86594E21B96270002265FE /* UI.swift */,
-				5D86594A21B9612A002265FE /* Operations.swift */,
 				5D86594C21B96266002265FE /* Storage.swift */,
+				5D86594A21B9612A002265FE /* Operations.swift */,
+				5D86594821B960B0002265FE /* Accaunt.swift */,
 			);
 			path = bankingApp;
 			sourceTree = "<group>";
