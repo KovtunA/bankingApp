@@ -3,7 +3,7 @@ import Foundation
 func getName() -> String {
     print("Please, write down your name")
     let usersNameOpt = readLine()
-    guard let usersName = usersNameOpt  else {
+    guard let usersName = usersNameOpt?.trimmingCharacters(in: .whitespaces)  else {
         print("Something went wrong with the optioanl Name")
         abort()
     }
@@ -18,9 +18,9 @@ func getAcc(name: String) -> Account {
 }
 
 func chooseOperation() -> Double {
-    print("Choose the operation: \n 1 - add money \n 2 - withdrow money")
+    print("Choose the operation: \n1 - add money \n2 - withdrow money")
     let operationOpt = readLine()
-    guard let operationStr = operationOpt, let operation = Int(operationStr) else {
+    guard let operationStr = operationOpt?.trimmingCharacters(in: .whitespaces), let operation = Int(operationStr) else {
         print("Something went wrong with the optioanl operation")
         abort()
     }
