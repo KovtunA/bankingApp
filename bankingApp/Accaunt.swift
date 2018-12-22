@@ -4,5 +4,3 @@ struct Account {
     var amount : Double
 }
 
-
-
