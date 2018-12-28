@@ -1,0 +1,14 @@
+.DS_Store
+
+# Xcode
+# this ignores dummy workspace files in xcodeproj dir
+bankingApp.xcodeproj/*
+!bankingApp.xcodeproj/project.pbxproj
+
+# this ignores all files in workspace dir except the needed one
+bankingApp.xcworkspace/*
+!bankingApp.xcworkspace/contents.xcworkspacedata
+
+# pods xcodeproj
+Pods/Pods.xcodeproj/*
+!Pods/Pods.xcodeproj/project.pbxproj
