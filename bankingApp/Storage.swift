@@ -5,14 +5,14 @@ let fileURL = documentsDir.appendingPathComponent("Tasks").appendingPathExtensio
 var contentsOfFile = try! String(contentsOf: fileURL)
 
  var newInfo: String = ""
-func updateInfo() {
+func updateInfo(newAmount: Double) {
     let acc = accountsArrey.filter {$0.name != currentUser.name}
     for elm in acc {
         let elmString = String("\n\(elm.name),\(elm.amount)")
         newInfo.append(elmString)
         try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
     }
-    let newStirng = String("\n\(currentUser.name),\(currentUser.amount)")
+    let newStirng = String("\n\(currentUser.name),\(newAmount)")
   newInfo.append(newStirng)
     try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
     

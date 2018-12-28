@@ -9,6 +9,7 @@ func addMoney(currentAmount: Double) -> Double {
     
     let currentAmountN = currentAmount + changes
     print("\(currentUser.name), now you have \(currentAmountN)")
+    updateInfo(newAmount: currentAmountN)
     return currentAmountN
 }
 
@@ -20,6 +21,7 @@ func withdrawMoney(currentAmount: Double) -> Double {
     if currentAmount >= changes{
     let currentAmountN = currentAmount - changes
     print("\(currentUser.name), now you have \(currentAmountN)")
+        updateInfo(newAmount: currentAmountN)
         return currentAmountN
     } else if currentAmount < changes {
         print("you can't withdraw money")

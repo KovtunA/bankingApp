@@ -12,4 +12,3 @@ print(currentUser)
 currentUser.amount = chooseOperation()
 print(currentUser)
 
-updateInfo()
