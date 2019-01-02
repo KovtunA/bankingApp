@@ -5,17 +5,30 @@ let fileURL = documentsDir.appendingPathComponent("Tasks").appendingPathExtensio
 var contentsOfFile = try! String(contentsOf: fileURL)
 
  var newInfo: String = ""
-func updateInfo(usersName:String, usersAmount: Double) {
+//func updateInfo(usersName:String, usersAmount: Double) {
+//    let acc = accountsArrey.filter {$0.name != usersName}
+//    for elm in acc {
+//        let elmString = String("\n\(elm.name),\(elm.amount)")
+//        newInfo.append(elmString)
+//        try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
+//    }
+//    let newStirng = String("\n\(usersName),\(usersAmount)")
+//  newInfo.append(newStirng)
+//    try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
+//}
+func saveAllInfo(usersName:String) {
     let acc = accountsArrey.filter {$0.name != usersName}
     for elm in acc {
         let elmString = String("\n\(elm.name),\(elm.amount)")
         newInfo.append(elmString)
         try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
     }
+}
+
+func updateInfo(usersName:String, usersAmount: Double) {
     let newStirng = String("\n\(usersName),\(usersAmount)")
-  newInfo.append(newStirng)
+    newInfo.append(newStirng)
     try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
-    
 }
 
 var accountsArrey: [Account] = []

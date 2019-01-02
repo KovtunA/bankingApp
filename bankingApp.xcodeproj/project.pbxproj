@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D00B71D21AEAD1100BA9055 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00B71C21AEAD1100BA9055 /* main.swift */; };
-		5D86594921B960B0002265FE /* Accaunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86594821B960B0002265FE /* Accaunt.swift */; };
+		5D86594921B960B0002265FE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86594821B960B0002265FE /* Account.swift */; };
 		5D86594B21B9612A002265FE /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86594A21B9612A002265FE /* Operations.swift */; };
 		5D86594D21B96266002265FE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86594C21B96266002265FE /* Storage.swift */; };
 		5D86594F21B96270002265FE /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86594E21B96270002265FE /* UI.swift */; };
@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		5D00B71921AEAD1100BA9055 /* bankingApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bankingApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D00B71C21AEAD1100BA9055 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		5D86594821B960B0002265FE /* Accaunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accaunt.swift; sourceTree = "<group>"; };
+		5D86594821B960B0002265FE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		5D86594A21B9612A002265FE /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
 		5D86594C21B96266002265FE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		5D86594E21B96270002265FE /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 				5D86594E21B96270002265FE /* UI.swift */,
 				5D86594C21B96266002265FE /* Storage.swift */,
 				5D86594A21B9612A002265FE /* Operations.swift */,
-				5D86594821B960B0002265FE /* Accaunt.swift */,
+				5D86594821B960B0002265FE /* Account.swift */,
 			);
 			path = bankingApp;
 			sourceTree = "<group>";
@@ -135,7 +135,7 @@
 				5D86594D21B96266002265FE /* Storage.swift in Sources */,
 				5D86594B21B9612A002265FE /* Operations.swift in Sources */,
 				5D86594F21B96270002265FE /* UI.swift in Sources */,
-				5D86594921B960B0002265FE /* Accaunt.swift in Sources */,
+				5D86594921B960B0002265FE /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

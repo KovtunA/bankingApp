@@ -10,6 +10,7 @@ func addMoney(currentAmount: Double) -> Double {
     let currentAmountN = currentAmount + changes
     print("\(currentUser.name), now you have \(currentAmountN)")
     updateInfo(usersName: currentUser.name, usersAmount: currentAmountN)
+    saveAllInfo(usersName: currentUser.name)
     return currentAmountN
 }
 
@@ -19,9 +20,10 @@ func withdrawMoney(currentAmount: Double) -> Double {
         print("Something went wrong with the optioanl Changes")
         abort()}
     if currentAmount >= changes{
-    let currentAmountN = currentAmount - changes
-    print("\(currentUser.name), now you have \(currentAmountN)")
+        let currentAmountN = currentAmount - changes
+        print("\(currentUser.name), now you have \(currentAmountN)")
         updateInfo(usersName: currentUser.name, usersAmount: currentAmountN)
+        saveAllInfo(usersName: currentUser.name)
         return currentAmountN
     } else if currentAmount < changes {
         print("you can't withdraw money")
@@ -40,14 +42,20 @@ func sendMoney(currentAmount: Double) -> Double {
     guard let sentMoneyStr = readLine(), let sentMoney = Double(sentMoneyStr) else {
         print("Something went wrong with the optioanl sentMoney")
         abort()}
-    let currentAmount = currentAmount - sentMoney
-    let recipAmount = acc.amount + sentMoney
     
-    print("Now \(currentUser.name) has \(currentAmount)")
-    print("and \(recipName) has \(recipAmount)")
-    updateInfo(usersName: currentUser.name, usersAmount: currentAmount)
-    updateInfo(usersName: recipName, usersAmount: recipAmount)
-    
+    if currentAmount >= sentMoney
+    {
+        let currentAmount = currentAmount - sentMoney
+        let recipAmount = acc.amount + sentMoney
+        
+        print("Now \(currentUser.name) has \(currentAmount)")
+        print("and \(recipName) has \(recipAmount)")
+        updateInfo(usersName: currentUser.name, usersAmount: currentAmount)
+        updateInfo(usersName: recipName, usersAmount: recipAmount)
+        saveAllInfo(usersName: currentUser.name)
+    } else if currentAmount < sentMoney {
+        print("you can't withdraw money")}
     return currentAmount
 }
+
 
