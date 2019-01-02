@@ -30,7 +30,7 @@ func chooseOperation() -> Double {
         switch operation {
         case 1: currentUser.amount = addMoney(currentAmount: currentUser.amount)
         case 2: currentUser.amount = withdrawMoney(currentAmount: currentUser.amount)
-     //   case 3: currentUser.amount = sendMoney(currentAmount: currentUser.amount)
+        case 3: currentUser.amount = sendMoney(currentAmount: currentUser.amount)
         case 0:
             print("\(currentUser.name), now you have \(currentUser.amount)")
             exit(0)
