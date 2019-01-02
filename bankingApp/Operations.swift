@@ -29,3 +29,4 @@ func withdrawMoney(currentAmount: Double) -> Double {
     }
     return currentAmount
 }
+
