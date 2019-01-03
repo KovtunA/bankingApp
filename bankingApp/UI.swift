@@ -12,7 +12,7 @@ func getName() -> String {
 }
 
 func getAcc(name: String) -> Account {
-    let accOptional = accountsArrey.first(where: {$0.name == userName})
+    let accOptional = accountsArray.first(where: {$0.name == userName})
     guard let acc = accOptional else {return Account(name: name, amount: 0) }
     return acc
 }
@@ -33,6 +33,7 @@ func chooseOperation() -> Double {
         case 3: currentUser = sendMoney()
         case 0:
             print("\(currentUser.name), now you have \(currentUser.amount)")
+            print(accountsArray)
             exit(0)
         default: break
         }

@@ -22,7 +22,7 @@ func addMoney() -> Account {
     
    currentUser.amount += changes
     print("\(currentUser.name), now you have \(currentUser.amount)")
-    updateInfo(usersName: currentUser.name, usersAmount: currentUser.amount)
+    updateInfo()
     return currentUser
 }
 
@@ -34,7 +34,7 @@ func withdrawMoney() -> Account {
     if currentUser.amount >= changes{
         currentUser.amount -= changes
         print("\(currentUser.name), now you have \(currentUser.amount)")
-        updateInfo(usersName: currentUser.name, usersAmount: currentUser.amount)
+        updateInfo()
         return currentUser
     } else if currentUser.amount < changes {
         print("you can't withdraw money")
@@ -45,7 +45,7 @@ func withdrawMoney() -> Account {
 
 func sendMoney() -> Account {
     let recipName = getName()
-    let optionalRecipAcc = accountsArrey.first(where: {$0.name == recipName})
+    let optionalRecipAcc = accountsArray.first(where: {$0.name == recipName})
     guard var recipAcc = optionalRecipAcc else { print("Wrong recipient's name")
         abort()}
     print("print the amount of money you'd like to send")
