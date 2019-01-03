@@ -7,6 +7,7 @@ repeat { userName = getName() }
 while  userName.count <= 0
 
 var  currentUser: Account = getAcc(name: userName)
+
 print(currentUser)
 
 
