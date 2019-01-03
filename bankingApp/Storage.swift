@@ -26,8 +26,8 @@ func updateAccArray(_ needToSave: Account) -> [Account] {
 
 func writeToFile() {
 //    let smth = updatedArray.compactMap {String }
-    let newInfo = updatedArray.compactMap() { String("\n\($0.name),\($0.amount)") + "\n" }
-     try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
+//    let newInfo = updatedArray.compactMap() { String("\n\($0.name),\($0.amount)") + "\n" }
+//     try! newInfo.write(to: fileURL, atomically: true, encoding: .utf8)
 }
 
 var accountsArray: [Account] = []
