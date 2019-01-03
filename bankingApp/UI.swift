@@ -33,7 +33,7 @@ func chooseOperation() -> Double {
         case 3: currentUser = sendMoney()
         case 0:
             print("\(currentUser.name), now you have \(currentUser.amount)")
-            print(accountsArray)
+            writeToFile()
             exit(0)
         default: break
         }

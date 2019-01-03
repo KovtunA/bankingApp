@@ -1,19 +1,5 @@
 import Foundation
 
-
-//func addMoney(currentAmount: Double) -> Double {
-//    print("Write the amount you would like to add to your account")
-//    guard let changesStr = readLine(), let changes = Double(changesStr)  else {
-//        print("Something went wrong with the optioanl Changes")
-//        abort()}
-//
-//    let currentAmountN = currentAmount + changes
-//    print("\(currentUser.name), now you have \(currentAmountN)")
-//    updateInfo(usersName: currentUser.name, usersAmount: currentAmountN)
-//    saveAllInfo(usersName: currentUser.name)
-//    return currentAmountN
-//}
-
 func addMoney() -> Account {
     print("Write the amount you would like to add to your account")
     guard let changesStr = readLine(), let changes = Double(changesStr)  else {
@@ -22,7 +8,7 @@ func addMoney() -> Account {
     
    currentUser.amount += changes
     print("\(currentUser.name), now you have \(currentUser.amount)")
-    updateInfo()
+updateAccArray(currentUser)
     return currentUser
 }
 
@@ -31,10 +17,10 @@ func withdrawMoney() -> Account {
     guard let changesStr = readLine(), let changes = Double(changesStr)  else {
         print("Something went wrong with the optioanl Changes")
         abort()}
-    if currentUser.amount >= changes{
-        currentUser.amount -= changes
+    if currentUser.amount >= changes {
+        currentUser.amount = currentUser.amount - changes
         print("\(currentUser.name), now you have \(currentUser.amount)")
-        updateInfo()
+        updateAccArray(currentUser)
         return currentUser
     } else if currentUser.amount < changes {
         print("you can't withdraw money")
@@ -53,13 +39,14 @@ func sendMoney() -> Account {
         print("Something went wrong with the optioanl sentMoney")
         abort()}
     
-    if currentUser.amount >= sentMoney
-    {
+    if currentUser.amount >= sentMoney {
         currentUser.amount -= sentMoney
         recipAcc.amount += sentMoney
         
         print("Now \(currentUser.name) has \(currentUser.amount)")
         print("and \(recipAcc.name) has \(recipAcc.amount)")
+        updateAccArray(currentUser)
+        updateAccArray(recipAcc)
     } else if currentUser.amount < sentMoney {
         print("you can't withdraw money")}
     return currentUser
