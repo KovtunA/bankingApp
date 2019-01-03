@@ -7,8 +7,7 @@ func getName() -> String {
         print("Something went wrong with the optioanl Name")
         abort()
     }
-    //print("Hi, \(usersName)")
-    return usersName
+     return usersName
 }
 
 func getAcc(name: String) -> Account {

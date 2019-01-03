@@ -51,5 +51,3 @@ func sendMoney() -> Account {
         print("you can't withdraw money")}
     return currentUser
 }
-
-

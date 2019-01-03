@@ -10,9 +10,6 @@ var  currentUser: Account = getAcc(name: userName)
 
 print(currentUser)
 
-
-
-
 currentUser.amount = chooseOperation()
 print(currentUser)
 
